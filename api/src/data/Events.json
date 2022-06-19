@@ -1,21 +1,242 @@
 [
   {
-    "id" : "1",
-    "title" : "deneme",
-    "desription": "sfnhlksndflkhnsnfdlkhnskldfnhnsdllkn",
-    "category" : "muzik ",
+    "id" : "WJ4nK1Cf",
+    "event_images" : ["WJ4nK1Cf-1.png","WJ4nK1Cf-2.jpg"],
+    "title" : "maNga",
+    "desription": "maNga, 31 Temmuz Pazar günü Atlantis Yapım organizasyonuyla Çeşme Açıkhava Tiyatrosunda sevenleriyle buluşuyor.",
+    "category" : "konser",
+    "performer": "maNga",
+    "tickets" : {
+      "section1" : 300.00,
+      "section2" : 275.00,
+      "section3" : 250.00 
+    },
+    "location" : {
+      "lat" : 38.322962,
+      "lng" : 26.308779,
+      "address" : "İsmet İnönü, 2053. Sk. 2A, 35930 Çeşme/İzmir",
+      "placeName" : "Çeşme Amfi Tiyatro"
+    },
+    "date" : {
+      "startingDate" : "2022-07-31T21:15:00.930Z",
+      "endDate" :"2022-07-31T23:59:00.930Z"
+    },
+    "isExpired" : false
+  },
+  {
+    "id" : "Am8gQrGb",
+    "event_images" : ["Am8gQrGb-1.jpg","Am8gQrGb-2.jpg","Am8gQrGb-3.jpg"],
+    "title" : "Küçükçiftlik Bahçe Tiyatrosu",
+    "desription": "KüçükÇiftlik Park’ın, kültür sanata ve tiyatro sanatının güçlenmesine destek vermek amacıyla büyük bir yatırım yaparak hayata geçirdiği KüçükÇiftlik Bahçe Tiyatrosu’nda üçüncü sezon başlıyor! <br><br>  En başarılı tiyatro gruplarının en sevilen oyunlarıyla yaz boyunca devam edecek olan KüçükÇiftlik Bahçe Tiyatrosu, sürprizli programıyla bir kez daha hem tiyatroların hem de tiyatroseverlerin nefes almasını sağlayacak. KüçükÇiftlik Park’ın yeşil yüzü KüçükÇiftlik Bahçe’de, önceki yıllarda olduğu gibi bu yıl da URU organizasyonu ve Mey|Diageo kurumsal desteğiyle gerçekleşecek KüçükÇiftlik Bahçe Tiyatrosu, İstanbulluları yıldızların altında tiyatronun iyileştirici gücüyle buluşturacak.<br> <br>  Şehrin eğlence mirası KüçükÇiftlik Park, 2020 yazında hayata geçirdiği KüçükÇiftlik Bahçe Tiyatrosu’yla, pandemi nedeniyle çok zor günler geçiren tiyatrolara iki sezon boyunca adeta can suyu oldu. 2020 ve 2021’in açıkhava sezonlarında toplam 21 farklı tiyatro ekibinin 37 temsili, 20 bine yakın seyirciyle buluştu. KüçükÇiftlik Bahçe Tiyatrosu, tiyatrolara yarattığı desteğin yanı sıra program kapsamında binlerce kişiyi istihdam ederek tüm sektöre önemli ölçüde gelir sağladı.",
+    "category" : "tiyatro",
+    "performer": "Küçükçiftlik Bahçe Tiyatrosu",
+    "tickets" : {
+      "section1" : 250.00,
+      "section2" : 200.00 ,
+      "section3" : 168.00 
+    },
+    "location" : {
+      "lat" : 41.042710,
+      "lng" : 28.993208,
+      "address" : "Harbiye, Kadırgalar Cd. No:4, 34367 Şişli/İstanbul",
+      "placeName" : "Küçükçiftlik Park"
+    },
+    "date" : {
+      "startingDate" : "2022-06-22T12:00:00.930Z",
+      "endDate" :"2022-08-31T23:59:00.930Z"
+    },
+    "isExpired" : false
+  },
+  {
+    "id" : "TRoG2Fxs",
+    "event_images" : ["TRoG2Fxs-1.jpg","TRoG2Fxs-2.webp"],
+    "title" : "Louis Tomlinson Konseri",
+    "desription": "Ülkemizde de büyük hayran kitlesine sahip İngiliz-İrlandalı müzik grubu One Direction'ın üyesi Louis Tomlinson solo projesi ile ilk kez ülkemizde! <br><br>2020 yılında ilk solo albümünü yayınlayan ve solo kariyerinde de kendisini kanıtlayan Louis Tomlinson, 30 Haziran 2022 tarihinde BITEXEN ana sponsorluğu ve TemaCC & Smiley Strawberry organizasyonu ile ilk kez İstanbul'da KüçükÇiftlik Park'ta sahne alacak. <br><br> Louis Tomlinson 2010 yılında katıldığı X Factor'ün yedinci sezonunda dikkati çekti. Nicole Scherzinger önerisi ile kurulan One Direction grubuna dahil oldu ve X Factor yarışmasına böylece devam etti. One Direction yarışmayı üçüncülükle bitirdi. <br> <br> İlk albümleri Up All Night, 18 Kasım 2011'de piyasaya sürülmüştür. Sonra da 2012 yılında 'Take Me Home' adlı albümü çıkarmışlardır. Ardından 25 Kasım 2013'te ''Midnight Memories'' adlı üçüncü stüdyo albümlerini yayınladılar. Daha önceki albümleriyle kırdıkları rekoru bu albümleriyle de bir kez daha kırdılar ve tarihinin en hızlı satılan albümü unvanına bir kez daha sahip oldular. En son olarak 17 Kasım 2014'te ''FOUR'' adlı dördüncü stüdyo albümlerini yayınladılar. <br> <br> FOUR albümünün Deluxe versiyonu iTunes'da 67 ülkede #1 numaraya yerleşti. 31 Ocak 2020 tarihinde, yayınladığı ilk solo albümü Walls, 50 ülkenin iTunes listesinde 1 numaraya ulaştı.",
+    "category" : "konser",
+    "performer": "Louis Tomlinson",
+    "tickets" : {
+      "section1" : 550.00,
+      "section2" : 385.00,
+      "section3" : 275.00 
+    },
+    "location" : {
+      "lat" : 41.042710,
+      "lng" : 28.993208,
+      "address" : "Harbiye, Kadırgalar Cd. No:4, 34367 Şişli/İstanbul",
+      "placeName" : "Küçükçiftlik Park"
+    },
+    "date" : {
+      "startingDate" : "2022-06-30T18:00:18.930Z",
+      "endDate" :"2022-06-31T00:00:00.930Z"
+    },
+    "isExpired" : false
+  },
+  {
+    "id" : "y3ooEo6J",
+    "event_images" : ["y3ooEo6J-1.webp"],
+    "title" : "Midsommar Festival",
+    "desription": "Doğanın en cömert, güneşin en parlak olduğu günün kutlandığı, sosyalleşmenin, sanatın ve eğlencenin kutsandığı bu çok özel İsveç geleneğin de, dünyanın dört bir yanından seslerle oluşturulacak müzik programı, Kuzey Avrupa temalı dekore edilmiş festival alanı, sayısız özgün aktivite ve atölye, doğal ürünler ve eski usuller ile yaratılan gastronomik bir yolculuk katılımcıları bekliyor olacak.",
+    "category" : "festival",
+    "performer": "About Nights",
+    "tickets" : {
+      "section1" : 1000.00,
+      "section2" : 0,
+      "section3" : 0
+    },
+    "location" : {
+      "lat" : 36.728089,
+      "lng" : 28.943921,
+      "address" : "GCK) Küme Evler No: 2, 48300 Göcek Adası/Fethiye/Muğla",
+      "placeName" : "Fimi Island"
+    },
+    "date" : {
+      "startingDate" : "2022-06-24T12:00:00.930Z",
+      "endDate" :"2022-06-26T12:00:00.930Z"
+    },
+    "isExpired" : false
+  },
+  {
+    "id" : "Ix8KZuW4",
+    "event_images" : ["default.png"],
+    "title" : "Baturay Özdemir Stand-up",
+    "desription": "Baturay Özdemir, KerkiSolfej Organizasyonu ile Şehrine Geliyor!",
+    "category" : "tiyatro",
+    "performer": "Baturay Özdemir",
+    "tickets" : {
+      "section1" : 150.00,
+      "section2" : 220.00,
+      "section3" : 0
+    },
+    "location" : {
+      "lat" : 40.986983,
+      "lng" : 29.028529,
+      "address" : "Osmanağa, Halil Ethem Sokak, General Asım Gündüz Cd., 34714 Kadıköy/İstanbul",
+      "placeName" : "Moda Sahnesi"
+    },
+    "date" : {
+      "startingDate" : "2022-06-19T21:00:00.930Z",
+      "endDate" :"2022-07-21T12:00:00.930Z"
+    },
+    "isExpired" : false
+  },
+  {
+    "id" : "lzbwxaTb",
+    "event_images" : ["lzbwxaTb-1.jpeg"],
+    "title" : "Dimitri Vegas & Like Mike konseri",
+    "desription": "2019 yılında DJ Mag tarafından Dünyanın En İyi DJ’leri seçilen Belçikalı DJ ve prodüktörler Dimitri Vegas & Like Mike, BKM ve Akademi Organizasyon iş birliğiyle yenilenen tarihiyle 2022 yılında İstanbul’da! Konser 10 Eylül’de KüçükÇiftlik Park’ta gerçekleşecek. ",
+    "category" : "konser",
+    "performer": "Dimitri Vegas & Like Mike",
+    "tickets" : {
+      "section1" : 318.00 ,
+      "section2" : 472.50 ,
+      "section3" : 787.50 
+    },
+    "location" : {
+      "lat" : 41.042710,
+      "lng" : 28.993208,
+      "address" : "Harbiye, Kadırgalar Cd. No:4, 34367 Şişli/İstanbul",
+      "placeName" : "Küçükçiftlik Park"
+    },
+    "date" : {
+      "startingDate" : "2022-06-18T12:33:18.930Z",
+      "endDate" :"2022-06-18T12:33:18.930Z"
+    },
+    "isExpired" : true
+  },
+  {
+    "id" : "YGmEx20M",
+    "event_images" : ["YGmEx20M-1.jpg","YGmEx20M-2.jpg"],
+    "title" : "Zeytinli Rock Fest",
+    "desription": "Umut Kuzey öncülüğünde Milyon Yapım Organizasyon tarafından Burhaniye Belediyesi’nin katkılarıyla 7. kez gerçekleşecek Türk rock müziğinin geçit töreni Zeytinli Rock Festivali 17-18-19-20-21 Ağustos 2022 tarihlerinde Burhaniye’de düzenlenecek.",
+    "category" : "festival",
+    "performer": "Milyon Yapım",
+    "tickets" : {
+      "section1" : 198.00 ,
+      "section2" : 165.00 ,
+      "section3" : 0
+    },
+    "location" : {
+      "lat" : 39.505347,
+      "lng" : 26.933456,
+      "address" : "Ören, No:, Ferit Çakıroğlu Cd. No:20, 10700 Burhaniye/Balıkesir",
+      "placeName" : "Ören plajı"
+    },
+    "date" : {
+      "startingDate" : "2022-08-20T12:33:18.930Z",
+      "endDate" :"2022-08-29T12:33:18.930Z"
+    },
+    "isExpired" : false
+  },
+  {
+    "id" : "PByoUzDB",
+    "event_images" : ["PByoUzDB-1.webp"],
+    "title" : "Tolgshow",
+    "desription": "‘Arkadaşım’ karakteri ile milyonları güldüren Tolga Çevik sahnede artık bir klasik haline gelen doğaçlama oyununun Türkiye Turnesi’yle izleyicinin karşısına çıkıyor.",
+    "category" : "tiyatro",
+    "performer": "Tolga Çevik",
     "tickets" : {
       "section1" : 123,
       "section2" : 123,
       "section3" : 123
     },
     "location" : {
-      "lat" : 12,
-      "lng" : 2
+      "lat" : 38.428293,
+      "lng" : 27.148247,
+      "address" : "Akdeniz, Fuar Alanı, 35210 Konak/İzmir",
+      "placeName" : "Kültürpark Açıkhava Tiyatrosu"
     },
     "date" : {
-      "startingDate" : "2022-06-18T12:33:18.930Z",
-      "endDate" :"2022-06-18T12:33:18.930Z"
-    }
+      "startingDate" : "2022-08-08T21:00:00.930Z",
+      "endDate" :"2022-08-08T23:59:18.930Z"
+    },
+    "isExpired" : false
+  },
+  {
+    "id" : "IzPnK3xi",
+    "event_images" : ["default.png"],
+    "title" : "Şahdamarım",
+    "desription": "Ahmed Arif tek bir şiir kitabıyla edebiyatımızın zirvesini tutmuş, halk kitlelerince en sevilen yazarların başında gelen büyük bir ozan. Ölümünün 30. yılında Dostlar Tiyatrosu onun değerli anısına bir armağan sunmak istedi. Genco Erkal onun şiir, söyleşi ve mektuplarından yola çıkarak ŞAHDAMARIM adlı bir müzikli gösteri düzenledi. Ozanın şiirlerinden bestelenen şarkıları sahnede Ercan ve Gökhan Çağıran kardeşler yorumlayacak.",
+    "category" : "tiyatro",
+    "performer": "Genco Erkal",
+    "tickets" : {
+      "section1" : 115.50,
+      "section2" : 150.00,
+      "section3" : 0
+    },
+    "location" : {
+      "lat" : 38.428293,
+      "lng" : 27.148247,
+      "address" : "Akdeniz, Fuar Alanı, 35210 Konak/İzmir",
+      "placeName" : "Kültürpark Açıkhava Tiyatrosu"
+    },
+    "date" : {
+      "startingDate" : "2022-05-18T12:15:18.930Z",
+      "endDate" :"2022-06-18T14:30:18.930Z"
+    },
+    "isExpired" : true
+  },
+  {
+    "id" : "KAhgdPej",
+    "event_images" : ["KAhgdPej.jpeg"],
+    "title" : "Taxim",
+    "desription": "Taxim, 20 Haziran  akşamı İzmir Açıkhava Tiyatrosunda seyircisi ile buluşuyor.",
+    "category" : "tiyatro",
+    "performer": "baba sahne",
+    "tickets" : {
+      "section1" : 0,
+      "section2" : 0,
+      "section3" : 0
+    },
+    "location" : {
+      "lat" : 38.428293,
+      "lng" : 27.148247,
+      "address" : "Akdeniz, Fuar Alanı, 35210 Konak/İzmir",
+      "placeName" : "Kültürpark Açıkhava Tiyatrosu"
+    },
+    "date" : {
+      "startingDate" : "2022-06-20T21:00:00.930Z",
+      "endDate" :"2022-06-20T23:59:18.930Z"
+    },
+    "isExpired" : false
   }
 ]

@@ -1,0 +1,106 @@
+.navbar{
+  position: relative;
+  border-bottom: 2px solid black;
+  nav {
+    position: relative;
+    background-color: white;
+    padding-top: 1.0625rem ;
+    padding-bottom: 1.0625rem ;
+  } 
+
+  &-logo {
+    h1 {
+      z-index: 1;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      font-size: $font-lg;
+      font-weight: 700;
+      color: black;
+      transition: color 250ms 250ms ease-in-out;
+    }
+  }
+  &-toggle { // mobile menu
+    > span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: black;
+      transform-origin: 3px 1px;
+      transition: all 250ms 250ms ease-in-out;
+      &:not(:last-child){
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+ 
+  &-links {
+    a{
+      position: relative;
+      font-size: $font-med;
+      color: black;
+      &:not(:last-child){
+        margin-right: 32px;
+      }
+
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    padding-top: 66px;
+    transform: translateY(-100%);
+    bottom: 100%;
+    right: 0;
+    left: 0;
+    background-color: black;
+    >a {
+      opacity: 0;
+      display: block;
+      text-align: start;
+      color: white;
+      padding: 1.5rem;
+      transition: opacity 250ms ease-in-out;
+      &:hover{
+        color: black;
+        background-color: $purple;
+      }
+      &:nth-child(1){
+        border-top: 2px solid white;
+      }
+    }
+    transition: transform 250ms 250ms ease-in-out;
+  }
+
+  &.open{
+    .navbar-toggle{
+      > span {
+        transition: all 250ms ease-in-out;
+        background-color: white;
+        &:nth-child(1){
+          transform: rotate(45deg);
+          }
+         &:nth-child(2){
+           opacity: 0;
+         }
+         &:nth-child(3){
+          transform: rotate(-45deg);
+         }
+        }
+    }
+    .overlay {
+      >a{
+        opacity: 1;
+        transition: color 200ms ease-in-out, background-color 200ms ease-in-out,opacity 250ms 250ms ease-in-out;
+      }
+      transition: transform 250ms  ease-in-out;
+      transform: translateY(100%);
+    }
+    h1 {
+      transition: color 250ms ease-in-out;
+      color: white;
+    }
+ }
+}

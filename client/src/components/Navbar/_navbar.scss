@@ -1,4 +1,5 @@
 .navbar{
+  z-index: 1;
   background-color: white;
   position: relative;
   border-bottom: 2px solid black;
@@ -9,7 +10,7 @@
     padding-bottom: 1.0625rem ;
   } 
   &-btn {
-    color: white;
+    color: white; 
     background-color: black;
     &:hover{
       color: black;
@@ -17,7 +18,7 @@
   }
   &-logo {
     h1 {
-      z-index: 1;
+      z-index: 2;
       position: relative;
       margin: 0;
       padding: 0;

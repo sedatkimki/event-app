@@ -1,15 +1,21 @@
 import React from "react";
+import Slider from "../components/Slider/Slider";
 import useFetch from "../hooks/useFetch";
 
 function Home() {
-  console.log(process.env.REACT_APP_API_URL);
-  const { data, error, loading } = useFetch(
-    process.env.REACT_APP_API_URL + "/events"
+  const { response, error, loading } = useFetch(
+    process.env.REACT_APP_API_URL + "/v1/events"
   );
-  console.log(data);
-  console.log(error);
-  console.log(loading);
-  return <div></div>;
+  // console.log(response);
+  // console.log(error);
+  // console.log(loading);
+  if (loading) {
+    return <p>loading</p>;
+  }
+  if (error) {
+    console.log(error);
+  }
+  return <div>{response && <Slider data={response.data} />}</div>;
 }
 
 export default Home;

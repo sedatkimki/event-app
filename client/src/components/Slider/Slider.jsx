@@ -45,18 +45,16 @@ function Slider({ data }) {
             position = "lastSlide";
           }
           return (
-            <Link to={"/" + slug} className={position} key={id}>
-              <div className="event-box">
-                <div className="image-container">
-                  <img
-                    src={
-                      process.env.REACT_APP_API_URL +
-                      "/images/" +
-                      event_images[0]
-                    }
-                    alt="event"
-                  />
-                </div>
+            <Link to={"/" + slug} className={position + " event-box"} key={id}>
+              <div className="image-container">
+                <img
+                  src={
+                    process.env.REACT_APP_API_URL + "/images/" + event_images[0]
+                  }
+                  alt="event"
+                />
+              </div>
+              <div className="event-box-body">
                 <h3 className="event-title">{title}</h3>
                 <p
                   className="event-description"
@@ -65,24 +63,25 @@ function Slider({ data }) {
                     __html: description.slice(0, 200),
                   }}
                 ></p>
-                <div className="event-box-footer">
-                  <span className="event-location">
-                    {location.placeName} -
-                    {" " +
-                      location.address.split(" ")[
-                        location.address.split(" ").length - 1
-                      ]}
-                  </span>
-                  <span className="event-date">
-                    {new Date(date.startingDate).toLocaleString("tr-TR", {
-                      timeZone: "UTC",
-                    })}{" "}
-                    -{" "}
-                    {new Date(date.endDate).toLocaleString("tr-TR", {
-                      timeZone: "UTC",
-                    })}
-                  </span>
-                </div>
+              </div>
+
+              <div className="event-box-footer">
+                <span className="event-location">
+                  {location.placeName} -
+                  {" " +
+                    location.address.split(" ")[
+                      location.address.split(" ").length - 1
+                    ]}
+                </span>
+                <span className="event-date">
+                  {new Date(date.startingDate).toLocaleString("tr-TR", {
+                    timeZone: "UTC",
+                  })}{" "}
+                  -{" "}
+                  {new Date(date.endDate).toLocaleString("tr-TR", {
+                    timeZone: "UTC",
+                  })}
+                </span>
               </div>
             </Link>
           );

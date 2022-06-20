@@ -10,6 +10,17 @@ const getAllEvents = catchAsync(async (req, res) => {
   }, true);
 });
 
+const getSingleEvent = catchAsync(async (req, res) => {
+  const paramSlug = req.params.slug;
+  readFile((events) => {
+    const data = events.filter((event) => {
+      return event.slug === paramSlug;
+    });
+    res.status(httpStatus.OK).send(data);
+  }, true);
+});
+
 module.exports = {
   getAllEvents,
+  getSingleEvent,
 };

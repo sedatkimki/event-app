@@ -5,7 +5,7 @@ const httpStatus = require("http-status");
 const ApiError = require("./utils/ApiError");
 const { errorHandler } = require("./middlewares/error");
 const routes = require("./routes/v1");
-const port = 3000;
+const port = 4000;
 
 const app = express();
 

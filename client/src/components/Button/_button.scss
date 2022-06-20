@@ -1,0 +1,23 @@
+button {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  margin: 0px;
+  padding: 0.3rem 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: $font-med;
+  font-weight: 500;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    transform: translate(-5px, -5px);
+    background-color: $purple;
+    box-shadow: black 5px 5px;
+  }
+  &:active {
+    background-color: $purple;
+    box-shadow: black 5px 5px;
+  }
+}

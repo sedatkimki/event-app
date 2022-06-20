@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Button from "../Button/Button";
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
   const handeToggleMenu = (e) => {
@@ -10,13 +11,13 @@ function Navbar() {
     <header className={isActive ? "navbar open " : "navbar"}>
       <nav className=" container container-pall flex flex-jc-sb flex-ai-c">
         <div className="overlay">
-          <Link to="/about" onClick={handeToggleMenu}>
+          <Link to="/" onClick={handeToggleMenu}>
             Konser
           </Link>
           <Link to="/" onClick={handeToggleMenu}>
             Tiyatro
           </Link>
-          <Link to="/about" onClick={handeToggleMenu}>
+          <Link to="/" onClick={handeToggleMenu}>
             Festival
           </Link>
         </div>
@@ -36,14 +37,20 @@ function Navbar() {
         </a>
 
         <div className="navbar-links hide-for-mobile">
-          <Link to="/">Konser</Link>
-          <Link to="/">Tiyatro</Link>
-          <Link to="/">Festival</Link>
+          <Link to="/">
+            Konser
+            <span className="navbar-links-underline"></span>
+          </Link>
+          <Link to="/">
+            Tiyatro
+            <span className="navbar-links-underline"></span>
+          </Link>
+          <Link to="/">
+            Festival
+            <span className="navbar-links-underline"></span>
+          </Link>
         </div>
-
-        <button type="button" className="navbar-btn hide-for-mobile">
-          Bul
-        </button>
+        <Button className="navbar-btn hide-for-mobile">Hemen Bul!</Button>
       </nav>
     </header>
   );

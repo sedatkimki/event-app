@@ -1,4 +1,5 @@
 .navbar{
+  background-color: white;
   position: relative;
   border-bottom: 2px solid black;
   nav {
@@ -7,7 +8,13 @@
     padding-top: 1.0625rem ;
     padding-bottom: 1.0625rem ;
   } 
-
+  &-btn {
+    color: white;
+    background-color: black;
+    &:hover{
+      color: black;
+    }
+  }
   &-logo {
     h1 {
       z-index: 1;
@@ -42,10 +49,24 @@
       font-size: $font-med;
       color: black;
       &:not(:last-child){
-        margin-right: 32px;
+        margin-right: 70px;
       }
-
+      &:hover > span{
+        width: 100%;
+      }
     }
+    &-underline{
+      position: absolute;
+      left: 0;
+      top: auto;
+      right: auto;
+      bottom: 0;
+      background-color: black;
+      height: 1px;
+      width: 0%;
+      transition: all 200ms ease-in-out;
+    }
+    
   }
 
   .overlay {

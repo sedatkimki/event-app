@@ -56,8 +56,7 @@ const EventQueryHelper = async function (req, res, events) {
       );
     });
   }
-
-  res.send(query);
+  return query;
 };
 
 module.exports = {

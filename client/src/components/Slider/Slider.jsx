@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState, useEffect } from "react";
-import leftArrow from "../../icons/left-arrow.svg";
-import rightArrow from "../../icons/right-arrow.svg";
+import LeftArrow from "../../icons/left-arrow.svg";
+import RightArrow from "../../icons/right-arrow.svg";
+
 import EventBox from "../EventBox/EventBox";
 function Slider({ data }) {
   const events = data.slice(0, 3);
@@ -27,8 +28,8 @@ function Slider({ data }) {
   return (
     <div className="slider ">
       {/* <h2>Popüler etkinlikler</h2> */}
-      <a className="prev" href="#" onClick={() => setIndex(index - 1)}>
-        <img src={leftArrow} alt="" />
+      <a className="prev " href="#" onClick={() => setIndex(index - 1)}>
+        <img src={LeftArrow} alt="" />
       </a>
       <div className="slider-center">
         {events.map((item, indexEvent) => {
@@ -46,8 +47,8 @@ function Slider({ data }) {
         })}
       </div>
 
-      <a className="next" href="#" onClick={() => setIndex(index + 1)}>
-        <img src={rightArrow} alt="" />
+      <a className="next " href="#" onClick={() => setIndex(index + 1)}>
+        <img src={RightArrow} alt="" />
       </a>
     </div>
   );

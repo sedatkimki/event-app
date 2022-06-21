@@ -1,0 +1,39 @@
+.hero{
+  display: grid;
+  grid-template-columns: auto;
+  @include breakpoint-up(large){
+    grid-template-columns: 50% 50%; 
+  }
+  &-body{
+    z-index: 1;
+    flex-direction: column;
+    background-color: $purple;
+    border-bottom: 2px solid black;
+    @include breakpoint-up(large){
+      grid-template-columns: 50% 50%; 
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+    }
+  }
+  &-title{
+    font-size: $font-lg;
+    font-weight: 700;
+    @include breakpoint-up(medium){
+      font-size: $font-xl;
+    }
+  }
+  &-description{
+    font-size: $font-med;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+  &-footer{
+    overflow: hidden;
+    background-color: $yellow;
+    @include breakpoint-up(large){
+      grid-template-columns: 50% 50%; 
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+    }
+  }
+}

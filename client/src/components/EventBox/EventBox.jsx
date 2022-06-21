@@ -16,14 +16,14 @@ function EventBox({ data, position }) {
       ],
     startingDate: new Date(data.date.startingDate).toLocaleString("tr-TR", {
       timeZone: "UTC",
-      month: "long",
+      month: "short",
       day: "numeric",
       hour: "2-digit",
       minute: "2-digit",
     }),
     endDate: new Date(data.date.endDate).toLocaleString("tr-TR", {
       timeZone: "UTC",
-      month: "long",
+      month: "short",
       day: "numeric",
       hour: "2-digit",
       minute: "2-digit",

@@ -1,5 +1,6 @@
 import React from "react";
-import Slider from "../components/Slider/Slider";
+import Hero from "../components/Hero/Hero";
+
 import useFetch from "../hooks/useFetch";
 
 function Home() {
@@ -15,7 +16,12 @@ function Home() {
   if (error) {
     console.log(error);
   }
-  return <div>{response && <Slider data={response.data} />}</div>;
+  return (
+    <>
+      {response && <Hero data={response.data} />}
+      deneme
+    </>
+  );
 }
 
 export default Home;

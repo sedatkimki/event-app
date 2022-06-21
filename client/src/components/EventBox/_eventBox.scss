@@ -25,6 +25,7 @@
     &-body{
       padding: 0.75rem;
       b {
+        font-size: $font-sm;
         font-weight: 600;
       }
     }
@@ -59,7 +60,7 @@
   &-description{
     margin: 0;
     font-weight: 500;
-    font-size: $font-med;
+    font-size: $font-sm;
   }
   &-location{
     display: flex;
@@ -67,6 +68,7 @@
     justify-content: flex-start;
     border-top: 1px solid black;
     padding: 0.75rem;
+    font-size: $font-sm;
     @include breakpoint-up(medium){
       
       border-right: 1px solid black;
@@ -77,6 +79,7 @@
     justify-content: flex-start;
     align-items: center;
     border-top: 1px solid black;
+    font-size: $font-sm;
     padding: 0.75rem;
   }
 }

@@ -1,20 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
 import leftArrow from "../../icons/left-arrow.svg";
 import rightArrow from "../../icons/right-arrow.svg";
+import EventBox from "../EventBox/EventBox";
 function Slider({ data }) {
+  const events = data.slice(0, 3);
   const [index, setIndex] = useState(0);
   useEffect(() => {
-    const lastIndex = data.length - 1;
+    const lastIndex = events.length - 1;
     if (index < 0) {
       setIndex(lastIndex);
     }
     if (index > lastIndex) {
       setIndex(0);
     }
-  }, [index, data]);
+  }, [index, events]);
 
   useEffect(() => {
     let slider = setInterval(() => {
@@ -31,60 +31,18 @@ function Slider({ data }) {
         <img src={leftArrow} alt="" />
       </a>
       <div className="slider-center">
-        {data.map((item, indexEvent) => {
-          const { id, slug, event_images, title, description, location, date } =
-            item;
+        {events.map((item, indexEvent) => {
           let position = "nextSlide";
           if (indexEvent === index) {
             position = "activeSlide";
           }
           if (
             indexEvent === index - 1 ||
-            (index === 0 && indexEvent === data.length - 1)
+            (index === 0 && indexEvent === events.length - 1)
           ) {
             position = "lastSlide";
           }
-          return (
-            <Link to={"/" + slug} className={position + " event-box"} key={id}>
-              <div className="image-container">
-                <img
-                  src={
-                    process.env.REACT_APP_API_URL + "/images/" + event_images[0]
-                  }
-                  alt="event"
-                />
-              </div>
-              <div className="event-box-body">
-                <h3 className="event-title">{title}</h3>
-                <p
-                  className="event-description"
-                  dangerouslySetInnerHTML={{
-                    //vulnerable to cross-site scripting attacks (XSS).
-                    __html: description.slice(0, 200),
-                  }}
-                ></p>
-              </div>
-
-              <div className="event-box-footer">
-                <span className="event-location">
-                  {location.placeName} -
-                  {" " +
-                    location.address.split(" ")[
-                      location.address.split(" ").length - 1
-                    ]}
-                </span>
-                <span className="event-date">
-                  {new Date(date.startingDate).toLocaleString("tr-TR", {
-                    timeZone: "UTC",
-                  })}{" "}
-                  -{" "}
-                  {new Date(date.endDate).toLocaleString("tr-TR", {
-                    timeZone: "UTC",
-                  })}
-                </span>
-              </div>
-            </Link>
-          );
+          return <EventBox data={item} position={position} />;
         })}
       </div>
 

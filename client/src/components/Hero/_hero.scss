@@ -30,9 +30,9 @@
   &-footer{
     overflow: hidden;
     background-color: $yellow;
+    border-bottom: 2px solid black;
     @include breakpoint-up(large){
       grid-template-columns: 50% 50%; 
-      border-bottom: 2px solid black;
       border-right: 2px solid black;
     }
   }

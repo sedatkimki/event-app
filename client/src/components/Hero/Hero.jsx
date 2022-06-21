@@ -1,7 +1,13 @@
 import React from "react";
 import Slider from "../Slider/Slider";
-
-function Hero({ data }) {
+import useFetch from "../../hooks/useFetch";
+function Hero() {
+  const { response, error, loading } = useFetch(
+    process.env.REACT_APP_API_URL + "/v1/events"
+  );
+  if (error) {
+    console.log(error);
+  }
   return (
     <section id="Hero" className="hero container">
       <div className="hero-body container-pall flex flex-jc-c ">
@@ -15,7 +21,8 @@ function Hero({ data }) {
       </div>
       <div className="hero-footer container-pall">
         <h2>Popüler etkinlikler</h2>
-        <Slider data={data} />
+        {loading && <p>loading</p>}
+        {response && <Slider data={response.data} />}
       </div>
     </section>
   );

@@ -28,7 +28,7 @@ function Slider({ data }) {
   return (
     <div className="slider ">
       {/* <h2>Popüler etkinlikler</h2> */}
-      <a className="prev " href="#" onClick={() => setIndex(index - 1)}>
+      <a className="prev " onClick={() => setIndex(index - 1)}>
         <img src={LeftArrow} alt="" />
       </a>
       <div className="slider-center">
@@ -43,11 +43,11 @@ function Slider({ data }) {
           ) {
             position = "lastSlide";
           }
-          return <EventBox data={item} position={position} />;
+          return <EventBox key={item.id} data={item} position={position} />;
         })}
       </div>
 
-      <a className="next " href="#" onClick={() => setIndex(index + 1)}>
+      <a className="next " onClick={() => setIndex(index + 1)}>
         <img src={RightArrow} alt="" />
       </a>
     </div>

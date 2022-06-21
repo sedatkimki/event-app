@@ -52,7 +52,7 @@ function EventBox({ data, position }) {
             }}
           ></p>
           <p>
-            <b>Devamını oku ->></b>
+            <b>{"Devamını oku ->>"}</b>
           </p>
         </div>
       </div>

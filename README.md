@@ -51,3 +51,7 @@ Api has two routes:
 
 * /v1/events
 * /v1/:slug
+
+first one is needed for getAllEvents by query params
+
+second one is needed for getSingleEvents by slug 

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CalendarSVG from "../../icons/calendar.svg";
 import LocationSVG from "../../icons/location.svg";
+import IconContainer from "../IconContainer/IconContainer";
 function EventBox({ data, position }) {
   const event = {
     id: data.id,
@@ -59,15 +60,11 @@ function EventBox({ data, position }) {
 
       <div className="event-box-footer">
         <span className="event-location">
-          <div className="icon-container flex flex-jc-c flex-ai-c">
-            <img src={CalendarSVG} alt="" />
-          </div>
+          <IconContainer SVG={CalendarSVG} />
           {event.placeName} - {event.address}
         </span>
         <span className="event-date">
-          <div className="icon-container flex flex-jc-c flex-ai-c">
-            <img src={LocationSVG} alt="" />
-          </div>
+          <IconContainer SVG={LocationSVG} />
           {event.startingDate} - {event.endDate}
         </span>
       </div>

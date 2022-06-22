@@ -1,0 +1,44 @@
+.event-page{
+  &-title{
+    padding: 10px;
+    border-bottom: 1px solid black;
+    >h2 {
+      margin-bottom: 0;
+    }
+  }
+  &-date{
+    font-size: $font-sm;
+    padding: 3px 10px;
+    border-bottom: 1px solid black;
+  }
+  &-location-short{
+    font-size: $font-sm;
+    padding: 3px 10px;
+    border-bottom: 1px solid black;
+  }
+  &-description {
+    font-size: $font-sm;
+    padding: 10px 15px;
+  }
+  &-wrapper{
+    border-left: 1px solid black;
+
+    border-right: 1px solid black;
+  }
+  &-slider{
+    border-bottom:1px solid black ;
+  }
+  &-map{
+    overflow:hidden;
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  &-fulladdress{
+    font-size: $font-sm;
+    padding: 0 15px;
+  }
+}

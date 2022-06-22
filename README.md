@@ -4,6 +4,8 @@ Event-app
 
 An application used to finding local events based on user preference, built with React, express.js, JavaScript, and CSS.
 
+online demo https://event-app-two.vercel.app/
+
 ## Installation and Setup Instructions
 
 This project made with react and express app. You will need to run both of them

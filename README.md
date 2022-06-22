@@ -14,7 +14,7 @@ Clone down this repository. You will need `node` and `npm` installed globally on
 
 Installation:
 `cd client`  
-`npm install` or `yarn install`
+`yarn install`
 
 create a `.env` file in client root and set these two variables
 

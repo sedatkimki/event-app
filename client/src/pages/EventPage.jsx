@@ -6,6 +6,9 @@ import ImageSlider from "../components/ImageSlider/ImageSlider";
 import useFetch from "../hooks/useFetch";
 import CalendarSVG from "../icons/calendar.svg";
 import LocationSVG from "../icons/location.svg";
+import TicketSVG from "../icons/ticket.svg";
+import PersonSVG from "../icons/person.svg";
+
 function EventPage() {
   let { slug } = useParams();
   let event;
@@ -22,6 +25,8 @@ function EventPage() {
       title: response.data[0].title,
       description: response.data[0].description,
       placeName: response.data[0].location.placeName,
+      tickets: response.data[0].tickets,
+      performer: response.data[0].performer,
       address:
         response.data[0].location.address.split(" ")[
           response.data[0].location.address.split(" ").length - 1
@@ -54,45 +59,83 @@ function EventPage() {
       id="event-page"
       className="event-page container container-pr container-pl"
     >
-      <div className="event-page-wrapper">
-        <div className="event-page-slider">
-          {event && <ImageSlider images={event.images} />}
-        </div>
+      <div className="event-page-slider">
+        {event && <ImageSlider images={event.images} />}
+      </div>
+      <div className="event-page-wrapper ">
+        <div className="column1">
+          <div className="event-page-title">
+            {event && <h2>{event.title}</h2>}
+          </div>
+          <div className="event-page-icons-wrapper">
+            <div className="event-page-icon flex  flex-ai-c">
+              <IconContainer SVG={PersonSVG} />
+              {event && (
+                <p className="event-page-icons-string">{event.performer}</p>
+              )}
+            </div>
+            <div className="event-page-icon flex  flex-ai-c">
+              <IconContainer SVG={CalendarSVG} />
+              {event && (
+                <p className="event-page-icons-string">
+                  {event.startingDate} - {event.endDate}
+                </p>
+              )}
+            </div>
+            <div className="event-page-icon flex  flex-ai-c">
+              <IconContainer SVG={LocationSVG} />
+              {event && (
+                <p className="event-page-date">
+                  {event.placeName} - {event.address}
+                </p>
+              )}
+            </div>
+            <div className="event-page-icon flex  flex-ai-fs">
+              <div style={{ marginTop: "5px" }}>
+                <IconContainer SVG={TicketSVG} />
+              </div>
 
-        <div className="event-page-title">
-          {event && <h2>{event.title}</h2>}
+              <div>
+                {event && (
+                  <p className="event-page-icons-string">
+                    1. Kategori - {event.tickets.section1} TL
+                  </p>
+                )}
+                {event && (
+                  <p className="event-page-icons-string">
+                    2. Kategori - {event.tickets.section2} TL
+                  </p>
+                )}
+                {event && (
+                  <p className="event-page-icons-string">
+                    3. Kategori - {event.tickets.section3} TL
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="event-page-date flex  flex-ai-c">
-          <IconContainer SVG={CalendarSVG} />
-          {event && (
-            <p className="event-page-date-string">
-              {event.startingDate} - {event.endDate}
-            </p>
-          )}
-        </div>
-        <div className="event-page-location-short flex  flex-ai-c">
-          <IconContainer SVG={LocationSVG} />
-          {event && (
-            <p className="event-page-date-string">
-              {event.placeName} - {event.address}
-            </p>
-          )}
-        </div>
-        <div className="event-page-description">
-          {event && (
-            <p
-              dangerouslySetInnerHTML={{
-                //vulnerable to cross-site scripting attacks (XSS).
-                __html: event.description,
-              }}
-            ></p>
-          )}
-        </div>
-        <div className="event-page-fulladdress">
-          {event && <p>Adres: {event.fullAddress}</p>}
-        </div>
-        <div className="event-page-map">
-          {event && <GoogleMaps lat={event.lat} lng={event.long} />}
+        <div className="column2">
+          <div className="event-page-description">
+            {event && (
+              <p
+                dangerouslySetInnerHTML={{
+                  //vulnerable to cross-site scripting attacks (XSS).
+                  __html: event.description,
+                }}
+              ></p>
+            )}
+          </div>
+          <div className="event-page-fulladdress">
+            {event && (
+              <p>
+                <b>Adres:</b> {event.fullAddress}
+              </p>
+            )}
+          </div>
+          <div className="event-page-map">
+            {event && <GoogleMaps lat={event.lat} lng={event.long} />}
+          </div>
         </div>
       </div>
     </section>

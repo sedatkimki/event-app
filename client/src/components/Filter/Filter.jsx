@@ -118,7 +118,7 @@ function Filter({ setSearchParams }) {
             >
               <CheckBox className={isExpired ? "checked" : ""} />
             </a>
-            <span>Süresi geçenleri dahil et</span>
+            <span>Süresi dolmuş</span>
           </div>
           <div className="vertical-line"></div>
           <div className="button-wrapper flex flex-jc-c flex-ai-c">

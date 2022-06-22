@@ -34,11 +34,17 @@ a,a:visited, a:hover{
   &-jc-sb {
     justify-content: space-between;
   }
+  &-jc-fs {
+    justify-content: flex-start;
+  }
   &-jc-c {
     justify-content: center;
   }
   &-ai-c {
     align-items: center;
+  }
+  &-ai-fs {
+    align-items: flex-start;
   }
 }
 

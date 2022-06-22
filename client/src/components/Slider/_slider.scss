@@ -7,7 +7,7 @@
   margin: 0 auto;
   margin-top: 0!important;
   width: 90%;
-  height: 700px;
+  height: 600px;
   max-width: 700px;
   position: relative;
   //for desktop and tablet
@@ -16,7 +16,7 @@
   }
   @include breakpoint-up(large){
     width: 85%;
-    height: 600px;
+    height: 700px;
   }
   >a{
     z-index: 0;

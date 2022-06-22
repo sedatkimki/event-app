@@ -1,0 +1,15 @@
+.results{
+  
+  .event-box{
+
+    margin-bottom: 25px;
+  }
+  @include breakpoint-up(medium){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .event-box {
+      width: 48%;
+    }
+  }
+}

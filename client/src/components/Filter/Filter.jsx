@@ -8,7 +8,7 @@ import axios from "axios";
 import useFetch from "../../hooks/useFetch";
 const categories = ["konser", "tiyatro", "festival"];
 
-function Filter({ setData }) {
+function Filter({ setSearchParams }) {
   const [isExpired, setisExpired] = useState(false);
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
@@ -22,10 +22,18 @@ function Filter({ setData }) {
     }&endDate=${endDate && endDate.toISOString()}&search=${search}`;
 
   const handleClick = () => {
-    console.log(url);
-    axios.get(url).then((response) => {
-      setData(response.data);
+    setStartDate(startDate && startDate.toISOString());
+    setEndDate(endDate && endDate.toISOString());
+    setSearchParams({
+      search,
+      category,
+      city,
+      startDate,
+      endDate,
     });
+    // axios.get(url).then((response) => {
+    //   setData(response.data.data);
+    // });
   };
   return (
     <section id="Filter" className="container container-pall">

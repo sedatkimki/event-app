@@ -18,7 +18,7 @@ function useFetch(url) {
         setLoading(false);
       });
   }, [url]);
-  return { response, loading, error, setResponse };
+  return { response, loading, error };
 }
 
 export default useFetch;

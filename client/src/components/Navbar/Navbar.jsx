@@ -11,13 +11,13 @@ function Navbar() {
     <header className={isActive ? "navbar open " : "navbar"}>
       <nav className=" container container-pall flex flex-jc-sb flex-ai-c">
         <div className="overlay">
-          <Link to="/" onClick={handeToggleMenu}>
+          <Link to="/search?category=konser" onClick={handeToggleMenu}>
             Konser
           </Link>
-          <Link to="/" onClick={handeToggleMenu}>
+          <Link to="/search?category=tiyatro" onClick={handeToggleMenu}>
             Tiyatro
           </Link>
-          <Link to="/" onClick={handeToggleMenu}>
+          <Link to="/search?category=festival" onClick={handeToggleMenu}>
             Festival
           </Link>
         </div>
@@ -37,20 +37,22 @@ function Navbar() {
         </a>
 
         <div className="navbar-links hide-for-mobile">
-          <Link to="/">
+          <Link to="/search?category=konser">
             Konser
             <span className="navbar-links-underline"></span>
           </Link>
-          <Link to="/">
+          <Link to="/search?category=tiyatro">
             Tiyatro
             <span className="navbar-links-underline"></span>
           </Link>
-          <Link to="/">
+          <Link to="/search?category=festival">
             Festival
             <span className="navbar-links-underline"></span>
           </Link>
         </div>
-        <Button className="navbar-btn hide-for-mobile">Hemen Bul!</Button>
+        <Link className="hide-for-mobile" to="/search">
+          <Button className="navbar-btn hide-for-mobile">Hemen Bul!</Button>
+        </Link>
       </nav>
     </header>
   );

@@ -4,6 +4,7 @@
     border: 1px solid black;
     border-radius: 5px;
     display: flex;
+    color: black;
     flex-direction: column;
     justify-content: space-between;
     
@@ -33,7 +34,7 @@
       display: grid;
       grid-template-columns: auto;
       
-      @include breakpoint-up(medium){
+      @include breakpoint-up(large){
         grid-template-columns: auto auto;
       }
       .icon-container{
@@ -69,7 +70,7 @@
     border-top: 1px solid black;
     padding: 0.75rem;
     font-size: $font-sm;
-    @include breakpoint-up(medium){
+    @include breakpoint-up(large){
       
       border-right: 1px solid black;
     }

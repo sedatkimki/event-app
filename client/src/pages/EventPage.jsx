@@ -8,6 +8,13 @@ import CalendarSVG from "../icons/calendar.svg";
 import LocationSVG from "../icons/location.svg";
 import TicketSVG from "../icons/ticket.svg";
 import PersonSVG from "../icons/person.svg";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "react-share";
+
+import { FacebookIcon, TwitterIcon, WhatsappIcon } from "react-share";
 
 function EventPage() {
   let { slug } = useParams();
@@ -70,14 +77,12 @@ function EventPage() {
           <div className="event-page-icons-wrapper">
             <div className="event-page-icon flex  flex-ai-c">
               <IconContainer SVG={PersonSVG} />
-              {event && (
-                <p className="event-page-icons-string">{event.performer}</p>
-              )}
+              {event && <p>{event.performer}</p>}
             </div>
             <div className="event-page-icon flex  flex-ai-c">
               <IconContainer SVG={CalendarSVG} />
               {event && (
-                <p className="event-page-icons-string">
+                <p>
                   {event.startingDate} - {event.endDate}
                 </p>
               )}
@@ -85,8 +90,17 @@ function EventPage() {
             <div className="event-page-icon flex  flex-ai-c">
               <IconContainer SVG={LocationSVG} />
               {event && (
-                <p className="event-page-date">
-                  {event.placeName} - {event.address}
+                <p>
+                  <a
+                    className="event-page-place"
+                    href={`/search?place=${event.placeName.replaceAll(
+                      " ",
+                      "-"
+                    )}`}
+                  >
+                    {event.placeName}
+                  </a>
+                  - {event.address}
                 </p>
               )}
             </div>
@@ -96,22 +110,33 @@ function EventPage() {
               </div>
 
               <div>
-                {event && (
-                  <p className="event-page-icons-string">
-                    1. Kategori - {event.tickets.section1} TL
-                  </p>
-                )}
-                {event && (
-                  <p className="event-page-icons-string">
-                    2. Kategori - {event.tickets.section2} TL
-                  </p>
-                )}
-                {event && (
-                  <p className="event-page-icons-string">
-                    3. Kategori - {event.tickets.section3} TL
-                  </p>
-                )}
+                {event && <p>1. Kategori - {event.tickets.section1} TL</p>}
+                {event && <p>2. Kategori - {event.tickets.section2} TL</p>}
+                {event && <p>3. Kategori - {event.tickets.section3} TL</p>}
               </div>
+            </div>
+            <div className="event-page-icon flex flex-jc-c  flex-ai-c">
+              <FacebookShareButton
+                className="share-button"
+                url={window.location.href}
+                quote="Bulduğum şu etkinliğe bir bakın"
+              >
+                <FacebookIcon size={32} round={true} />
+              </FacebookShareButton>
+              <TwitterShareButton
+                className="share-button"
+                url={window.location.href}
+                title="Bulduğum şu etkinliğe bir bakın"
+              >
+                <TwitterIcon size={32} round={true}></TwitterIcon>
+              </TwitterShareButton>
+              <WhatsappShareButton
+                className="share-button"
+                url={window.location.href}
+                title="Bulduğum şu etkinliğe bir bakın"
+              >
+                <WhatsappIcon size={32} round={true}></WhatsappIcon>{" "}
+              </WhatsappShareButton>
             </div>
           </div>
         </div>

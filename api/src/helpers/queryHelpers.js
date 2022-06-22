@@ -40,7 +40,6 @@ const EventQueryHelper = async function (req, res, events) {
     }
 
     query = query.filter((event) => {
-      console.log(event.isExpired);
       return event.isExpired === isExpired;
     });
   }
@@ -49,9 +48,9 @@ const EventQueryHelper = async function (req, res, events) {
   if (req.query.place) {
     query = query.filter((event) => {
       const eventPlace = event.location.placeName
-        .replace(" ", "-")
+        .replaceAll(" ", "-")
         .toLowerCase();
-      const queryPlace = req.query.place.toLowerCase(); // queries first letter must be upper case
+      const queryPlace = req.query.place.toLowerCase();
       return eventPlace === queryPlace;
     });
   }

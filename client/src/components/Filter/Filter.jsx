@@ -4,8 +4,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import cities from "./cities.json";
 import { ReactComponent as CheckBox } from "../../icons/checkbox.svg";
-import axios from "axios";
-import useFetch from "../../hooks/useFetch";
 const categories = ["konser", "tiyatro", "festival"];
 
 function Filter({ setSearchParams }) {

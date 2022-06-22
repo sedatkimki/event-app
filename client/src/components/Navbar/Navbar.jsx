@@ -20,6 +20,9 @@ function Navbar() {
           <Link to="/search?category=festival" onClick={handeToggleMenu}>
             Festival
           </Link>
+          <Link to="/search" onClick={handeToggleMenu}>
+            Hemen Bul!
+          </Link>
         </div>
 
         <a href="/" className="navbar-logo">

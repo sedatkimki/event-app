@@ -11,6 +11,13 @@
     font-size: $font-sm;
     padding: 4px 15px;
     border-bottom: 1px solid black;
+    .share-button {
+      margin-right: 15px;
+      &:hover{
+        box-shadow: none!important;
+        transform: none!important;
+      }
+    }
   }
   &-description {
     font-size: $font-sm;
@@ -26,6 +33,10 @@
       display: flex;
     }
     
+  }
+  &-place{
+    color: black;
+    text-decoration: underline;
   }
   &-slider{
     border-bottom:1px solid black ;
@@ -58,3 +69,4 @@
     width: 60%;
   }
 }
+

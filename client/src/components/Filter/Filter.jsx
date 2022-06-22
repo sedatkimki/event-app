@@ -13,27 +13,20 @@ function Filter({ setSearchParams }) {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
   const [city, setCity] = useState("");
-  const [startDate, setStartDate] = useState("");
+  const [startingDate, setStartingDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const url =
-    process.env.REACT_APP_API_URL +
-    `/v1/events?category=${category}&city=${city}&startingDate=${
-      startDate && startDate.toISOString()
-    }&endDate=${endDate && endDate.toISOString()}&search=${search}`;
 
   const handleClick = () => {
-    setStartDate(startDate && startDate.toISOString());
-    setEndDate(endDate && endDate.toISOString());
+    setStartingDate(startingDate && startingDate);
+    setEndDate(endDate && endDate);
     setSearchParams({
+      isExpired,
       search,
       category,
       city,
-      startDate,
+      startingDate,
       endDate,
     });
-    // axios.get(url).then((response) => {
-    //   setData(response.data.data);
-    // });
   };
   return (
     <section id="Filter" className="container container-pall">
@@ -51,10 +44,10 @@ function Filter({ setSearchParams }) {
           <DatePicker
             placeholderText="başlangıç tarihi seçiniz"
             className="filter-date filter-date-start"
-            selected={startDate}
+            selected={startingDate}
             format="dd-MM-yyyy"
             fo
-            onChange={(date) => setStartDate(new Date(date))}
+            onChange={(date) => setStartingDate(new Date(date))}
           />
           <div className="vertical-line"></div>
           <DatePicker

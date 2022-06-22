@@ -11,6 +11,7 @@ function Search() {
     let url =
       process.env.REACT_APP_API_URL + `/v1/events?${searchParams.toString()}`;
     getEventsByQuery(url);
+    console.log(url);
   }, [searchParams]);
 
   const getEventsByQuery = async (url) => {

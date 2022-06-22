@@ -32,6 +32,18 @@ const EventQueryHelper = async function (req, res, events) {
       return eventCity === queryCity;
     });
   }
+  if (req.query.isExpired) {
+    if (req.query.isExpired == "true") {
+      isExpired = true;
+    } else {
+      isExpired = false;
+    }
+
+    query = query.filter((event) => {
+      console.log(event.isExpired);
+      return event.isExpired === isExpired;
+    });
+  }
 
   // get by place
   if (req.query.place) {

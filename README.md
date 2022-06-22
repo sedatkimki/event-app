@@ -10,7 +10,7 @@ This project made with react and express app. You will need to run both of them
 
 ### React
 
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.
+Clone down this repository. You will need `node` and `yarn` installed globally on your machine.
 
 Installation:
 `cd client`  
